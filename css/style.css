@@ -102,3 +102,28 @@ body{
         font-size: 1.4rem;
     }
 }
+
+/* list */
+.list{
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+.list--inline .list__item{
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.list--tick .list__item{
+    background: url(../assets/images/Tick-Square.svg);
+    background-position: center right ;
+    background-repeat: no-repeat;
+    padding-right: 3rem;
+    margin-bottom: 1.5rem;
+}
+@media screen and (min-width:1024px) {
+    .list--tick .list__item{
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }   
+}
