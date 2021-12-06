@@ -81,3 +81,24 @@ body{
         font-size: 2rem;
     }
 }
+
+/* badge */
+
+.badge{
+    display: inline-block;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    border: 2px solid #FE4E00;
+    padding: .7rem 1.3rem;
+    border-radius:3.2rem ;
+    text-transform: uppercase;
+}
+.badge--primary{
+    color:var(--color-white);
+    background-color: var(--color-primary);
+}
+@media screen and (min-width:1024px) {
+    .badge{
+        font-size: 1.4rem;
+    }
+}

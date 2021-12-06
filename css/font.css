@@ -11,6 +11,6 @@
     src: url(../assets//fonts/Vazir-Bold.woff);
 }
 
-body,button{
+body,button,.badge{
     font-family: "iranYekan";
 }
