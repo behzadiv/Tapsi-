@@ -16,3 +16,68 @@
     --color-headings:#000;
     --color-white:#fff;
 }
+
+html{
+
+    font-size: 62.5%;
+}
+body{
+    color: var(--color-body);
+    font-size: 1.4rem;
+}
+
+h1,h2,h3{
+    color: var(--color-headings);
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2.2rem;
+}
+
+@media only screen and (min-width:1024px){
+body{
+    font-size: 1.8rem;
+}
+    h2{
+        font-size: 3.5rem;
+    }
+    h3{
+        font-size: 2.8rem;
+    }
+}
+
+
+/* buttons */
+
+.btn{
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    padding: 1.5rem 2.2rem;
+    border-radius: .8rem;
+    font-size: 1.4rem;
+}
+.btn--primary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.btn--secondary{
+    background-color: var(--color-secondary--dark);
+    color: var(--color-white);
+}
+.btn--block{
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width:1024px) {
+    .btn{
+        padding: 1.5rem 2.8rem;
+        font-size: 1.6rem;
+    }
+    .btn--block{
+        font-size: 2rem;
+    }
+}
