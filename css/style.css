@@ -10,8 +10,9 @@
 /* variables */
 :root{
     --color-primary : #FF5722;
+    --color-primary-light:#FF7A50;
     --color-secondary-light:#FFF6F2;
-    --color-secondary--dark:#FF7A50;
+    --color-secondary--dark:#FFA589;
     --color-body:#333;
     --color-headings:#000;
     --color-white:#fff;
@@ -24,6 +25,7 @@ html{
 body{
     color: var(--color-body);
     font-size: 1.4rem;
+    line-height: 3rem;
 }
 
 h1,h2,h3{
@@ -31,6 +33,7 @@ h1,h2,h3{
 }
 h2{
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 h3{
     font-size: 2.2rem;
@@ -42,12 +45,17 @@ body{
 }
     h2{
         font-size: 3.5rem;
+        margin-bottom: 2rem;
     }
     h3{
         font-size: 2.8rem;
     }
 }
-
+/* container */
+.container{
+    max-width: 1140px;
+    margin: 100px auto;
+}
 
 /* buttons */
 
@@ -92,6 +100,7 @@ body{
     padding: .7rem 1.3rem;
     border-radius:3.2rem ;
     text-transform: uppercase;
+    background-color: var(--color-secondary-light);
 }
 .badge--primary{
     color:var(--color-white);
@@ -126,4 +135,71 @@ body{
         font-size: 1.8rem;
         margin-bottom: 2rem;
     }   
+}
+
+/* plan */
+.block--plan{
+    display: grid;
+    gap: 7rem 7rem;
+    grid-template-columns:repeat(auto-fit,minmax(250px,330px));
+    justify-content: center;
+}
+.plan{
+    /* max-width: 450px; */
+    transition: all .2s;
+    padding: 0 10px;
+}
+.card{
+    border-radius: 20px;
+    background-color:var(--color-secondary-light);
+    overflow: hidden;
+}
+.card__body , .card__header{
+    padding: 2rem 3rem;
+}
+.card__header{
+    background-color: var(--color-secondary--dark);
+    color: var(--color-white);
+    font-size: 1.8rem;
+}
+.card__primary .card__header{
+ background-color:var(--color-primary-light);
+}
+.plan__introduction{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.plan__price{
+    font-size: 1.8rem;
+}
+.plan__billingCycle{
+    font-size: 1.4rem;
+}
+.plan__description{
+    display: block;
+    margin-top:1.5rem;
+    font-size: 1.8rem;
+}
+.plan .btn{
+    margin-top: 10rem;
+}
+.plan--popular{
+    transform: scale(1.1);
+    
+}
+@media screen and (min-width:1024px) {
+    .block--plan{
+        /* grid-template-columns: repeat(3,1fr); */
+        gap: 2rem 7rem;
+    }
+    .plan{
+        padding: 0;
+    }
+    .plan:hover {
+        transform: scale(1.1);
+    }
+    .plan--popular:hover{
+        transform: scale(1);
+    }
 }
