@@ -15,6 +15,21 @@
     <title>تپسی</title>
   </head>
   <body>
+    <header class="nav container" >
+      <a href=""><img src="./assets/images/logo.svg" alt=""></a>
+      <div class="nav__toggler" onclick={showMenu()}>
+        <div id="col_1"></div>
+        <div id="col_2"></div>
+        <div id="col_3"></div>
+      </div>
+      <ul class="list nav__lists">
+        <li class="nav__item"><a href="">پشتیبانی</a></li>
+        <li class="nav__item"><a href=""> خدمات کسب و کار</a></li>
+        <li class="nav__item"><a href="">فرصت های شغلی</a></li>
+        <li class="nav__item"><a href="">وبلاک</a></li>
+        <li class="nav__item cta"><a href="" class="btn btn--primary">دانلود تپسی</a></li>
+      </ul>
+    </header>
     <section class="feature--block container">
       <div class="feature__detail">
         <h2>خدمات تپسی برای کسب و کارها</h2>
@@ -220,5 +235,6 @@
       
     </footer>
   </section>
+  <script src="./script.js"></script>
   </body>
 </html>

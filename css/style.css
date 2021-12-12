@@ -8,6 +8,7 @@
 }
 a{
     color: unset;
+    text-decoration: none;
 }
 /* variables */
 :root {
@@ -18,6 +19,7 @@ a{
   --color-body: #333;
   --color-headings: #000;
   --color-white: #fff;
+  --color-nav:#f8f8f8;
 }
 
 html {
@@ -57,7 +59,7 @@ h3 {
 /* container */
 .container {
   max-width: 1140px;
-  margin: 100px auto;
+  margin-bottom: 100px;
 }
 
 /* buttons */
@@ -490,33 +492,87 @@ h3 {
   
 }
 
+/* navbar */
 
-
-.content{
+.nav{
   display: flex;
-  background-color: violet;
-  width: 100%;
   justify-content: space-between;
-  margin: 0 auto;
+  align-items:center;
+  background-color: var(--color-nav);
   flex-wrap: wrap;
+  padding: .5rem 1.5rem;
 }
-.box1 , .box2, .box3{
-  min-width: 200px;
+.nav__lists{
+  width: 100%;
+  margin-top: 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .2s;
+}
+.nav__item{
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+.nav__item > a{
   display: block;
-  height: 200px;
+  padding: .7rem;
+  font-size: 1.4rem;
 }
-.box1{
-  background-color: red;
-  /* flex-basis: 500px;
- flex-shrink: 1; */
+.nav__item > a:hover{
+  color: var(--color-primary);
 }
-.box2{
-  background-color: burlywood;
-  /* flex-basis: 500px;
- flex-shrink: 1; */
+.nav__item.cta{
+  padding: .5rem;
+  text-align: center;
+  border-bottom: none;
 }
-.box3{
-  background-color: yellow;
-  /* flex-basis: 500px;
-  flex-shrink: 1; */
+.nav__toggler > div {
+  width: 3.2rem;
+  height: 4.2px;
+  background-color: #000;
+  border-radius: 50px;
+  margin-top: .5rem;
+  transition: all 100ms;
+}
+.show__menu{
+  max-height: 100vh;
+  opacity: 1;
+}
+.hidden{
+  opacity: 0;
+  }
+
+.times1{
+  transform: rotate(45deg) translate(22px,5px);
+    margin: 6px 0;
+}
+.times2{
+  transform: rotate(-45deg)translate(9px, 9px);
+        margin: 6px 0;
+      }
+@media screen and (min-width:700px){
+  .nav{
+    padding: 0 1.5rem;
+  }
+  .nav__item.cta{
+    padding:0;
+  }
+  .nav__item.cta>a{
+    padding:.5rem 2rem;
+  }
+  .nav__toggler{
+    display: none;
+  }
+  .nav__lists{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    max-height: 100%;
+    opacity: 1;
+  }
+  .nav__item{
+    border-bottom: 0;
+  }
+  
 }
