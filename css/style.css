@@ -58,7 +58,8 @@ h3 {
 }
 /* container */
 .container {
-  max-width: 1140px;
+  max-width: 1040px;
+  margin: 0px auto;
 }
 
 /* buttons */
@@ -262,6 +263,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 .contactUs--detail {
   display: flex;
@@ -324,6 +326,7 @@ h3 {
   padding: 42px 45px;
   max-width: 300px;
   justify-content: space-evenly;
+  margin-bottom: 2rem;
 }
 .contactUs__messeage > h3 {
   width: 100%;
@@ -452,9 +455,6 @@ textarea:focus {
 }
 .footer__enemad {
   display: flex;
-
-  justify-content: stretch;
-  width: 30%;
   max-width: 30%;
 }
 .footer__enemad img {
@@ -465,16 +465,16 @@ textarea:focus {
   display: block;
   height: 15vh;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 700px) {
   .footer {
     /* flex-direction: row; */
   }
   .main--footer__item {
-    text-align: unset;
     padding: 0 1rem;
     max-width: 200px;
     height: auto;
   }
+
   .footer__enemad {
     /* margin-right: 2rem; */
     background-color: red;
@@ -483,12 +483,13 @@ textarea:focus {
 }
 
 /* navbar */
-
+header {
+  background-color: var(--color-nav);
+}
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-nav);
   flex-wrap: wrap;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
@@ -542,12 +543,16 @@ textarea:focus {
   transform: rotate(-45deg) translate(9px, 9px);
   margin: 6px 0;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 840px) {
   .nav {
-    padding: 0 1.5rem;
+    padding: 0 5rem;
   }
   .nav__item.cta {
     padding: 0;
+  }
+  .nav__item > a {
+    padding: 1rem;
+    font-size: 2rem;
   }
   .nav__item.cta > a {
     padding: 0.5rem 2rem;
@@ -575,8 +580,9 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
-.hero--section >:first-child{
+.hero--section > :first-child {
   width: 100%;
   height: 600px;
   display: flex;
@@ -585,13 +591,12 @@ textarea:focus {
 .hero--section img {
   width: 100%;
   height: 100%;
-  
 }
-.banner-phone{
+.banner-phone {
   display: none;
   position: absolute;
-  left: 10%;
-  bottom: -50%;
+  left: 5%;
+  bottom: -40%;
   width: 420px !important;
   height: auto !important;
 }
@@ -605,7 +610,6 @@ textarea:focus {
 }
 .hero--wrapper {
   position: absolute;
- 
 }
 .btn--intro {
   display: flex;
@@ -625,7 +629,7 @@ textarea:focus {
   color: var(--color-white);
   margin: 2rem 0;
 }
-.intro--wrapper{
+.intro--wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -633,13 +637,13 @@ textarea:focus {
 }
 .intro--wrapper > div {
   margin-bottom: 2rem;
-  width: 270px;
+  min-width: 270px;
   font-size: 1.2rem;
   border-radius: 1.2rem;
   padding: 1.5rem 4.2rem;
   font-weight: bold;
 }
-.btn--intro--content{
+.btn--intro--content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -658,109 +662,168 @@ textarea:focus {
   border: 2px solid #fff;
 }
 
-@media screen and (min-width:700px){
-  .hero--section{
+@media screen and (min-width: 700px) {
+  .hero--section {
     justify-content: flex-start;
   }
-  .btn--intro{
+  .btn--intro {
     width: 590px;
   }
-  .banner-phone{
-    display: block;
-  }
-  .intro--wrapper{
+
+  .intro--wrapper {
     flex-direction: row;
     justify-content: space-between;
   }
-  
-  
-  .btn--intro h1{
+
+  .btn--intro h1 {
     font-size: 5rem;
   }
-  .btn--intro h2{
+  .btn--intro h2 {
     font-size: 2.4rem;
   }
   .btn--intro {
     flex-direction: row;
     flex-wrap: wrap;
   }
- 
 }
 /* services */
-.services--title{
+.services--title {
   font-size: 2.2rem;
   font-weight: 700;
 }
 
-.services__tabs{
+.services__tabs {
   display: flex;
   justify-content: space-between;
   overflow: auto;
   width: 100%;
 }
-.tab{
+.tab {
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: .5;
+  opacity: 0.5;
   transition: all 200ms ease-in-out;
   cursor: pointer;
-  margin : 2rem 0 ;
+  margin: 2rem 0;
   padding: 10px 5px;
 }
-.tab:hover{
+.tab:hover {
   opacity: 1;
 }
-.tab.active{
+.tab.active {
   opacity: 1;
 }
-.tab > img{
+.tab > img {
   max-width: 85px;
 }
-.tab a{
+.tab a {
   max-width: 100px;
 }
-.tab > p{
+.tab > p {
   font-size: 1.2rem;
   margin-top: 1rem;
 }
-.tab--content .feature__image{
+.tab--content .feature__image {
   display: none;
 }
-.tab--content{
+.tab--content {
   display: none;
 }
-.tab--content.active{
+.tab--content.active {
   display: flex;
 }
-@media screen and (min-width:700px){
-  .tab > p{
+@media screen and (min-width: 700px) {
+  .tab > p {
     font-size: 1.4rem;
     margin-top: 1rem;
   }
-  .tab > img{
+  .tab > img {
     max-width: 100%;
   }
-  .services--title{
+  .services--title {
     font-size: 3rem;
   }
-  .tab--content .feature__image{
+  .tab--content .feature__image {
     display: block;
   }
+}
+/* prizes */
+.prizes--section {
+  background-color: #fff;
+  padding: 2rem;
+  border: 2px solid #d8d8d8;
+  border-radius: 10px;
+}
+.prizes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+  column-gap: 2rem;
+  padding:3rem;
+}
+.prizes::-webkit-scrollbar{
+  display: none;
+}
+.prizes img {
+  width: 335px;
+  height: 236px;
+  border-radius: 30px;
+}
+.prize__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prizes .description {
+  width: 244px;
+  height: 134px;
+  background: #ffffff;
+  box-shadow: 0px 80px 100px rgba(0, 0, 0, 0.16);
+  border-radius: 32px;
+  margin-top: -7rem;
+  padding:2rem ;
+}
+.prizes .description p{
+  font-size: 1.2rem;
+}
+.prizes .description .badge{
+  width: 25%;
+  margin-left: 2rem;
+  text-align: center;
+  padding:0 1rem;
+}
+.prizes__icon{
+  display: flex;
+  margin-top: 1.2rem;
+  justify-content: space-around;
+  opacity: .5;
+}
+.prizes__icon i {
+  margin-right: 1rem;
 }
 
 /* final css */
 
-.block{
-  padding:0rem 2rem;
+.block {
+  padding: 0rem 2rem;
 }
-.block--heading{
+.block--heading {
   margin-top: 6rem;
   margin-bottom: 3rem;
 }
 
-@media screen and (min-width:1024px){
-  .block{
+@media screen and (min-width: 1024px) {
+  .block {
     padding: 6rem 2rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .banner-phone {
+    display: block;
   }
 }
