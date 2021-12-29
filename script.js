@@ -21,3 +21,11 @@ tabs.forEach((tab) => {
     targetTabContent.classList.add("active")
   });
 });
+
+
+////accordion
+
+const accordion = document.querySelector(".accordion")
+accordion.addEventListener("click",(e)=>{
+  accordion.classList.toggle("accordion__expanded")
+})

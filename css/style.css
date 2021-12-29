@@ -754,6 +754,10 @@ header {
   padding: 2rem;
   border: 2px solid #d8d8d8;
   border-radius: 10px;
+  margin-bottom: 3rem;
+}
+.prizes--section .block--heading{
+  margin-top: 0px;
 }
 .prizes {
   display: flex;
@@ -780,8 +784,7 @@ header {
 }
 
 .prizes .description {
-  width: 244px;
-  height: 134px;
+  width: 280px;
   background: #ffffff;
   box-shadow: 0px 80px 100px rgba(0, 0, 0, 0.16);
   border-radius: 32px;
@@ -800,11 +803,49 @@ header {
 .prizes__icon{
   display: flex;
   margin-top: 1.2rem;
-  justify-content: space-around;
+  justify-content: space-between;
   opacity: .5;
 }
 .prizes__icon i {
   margin-right: 1rem;
+}
+
+.avatar__group{
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+.avatar__group .avatar{
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  margin-left: -20px;
+  overflow: hidden;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  position: relative;
+}
+.avatar:hover{
+  transform: translateX(10px);
+}
+.avatar img{
+  width: 100%;
+  height: 100%;
+}
+.hidden__avatar{
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary-light);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  position: relative;
+  cursor: pointer;
 }
 
 /* final css */
